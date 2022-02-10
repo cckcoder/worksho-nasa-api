@@ -1,22 +1,18 @@
 {
-  "name": "server",
+  "name": "nasa-project",
   "version": "1.0.0",
-  "description": "NASA Mission Control API",
-  "main": "src/server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js",
-    "watch": "nodemon src/server.js"
+    "install-server": "npm i --prefix server",
+    "install-client": "npm i --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "watch": "npm run server & npm run client",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.15",
-    "prettier": "^2.5.1"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "csv-parse": "^5.0.4",
-    "express": "^4.17.2"
-  }
+  "license": "ISC"
 }
